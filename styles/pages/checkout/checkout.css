@@ -228,3 +228,18 @@
 .is-editing-quantity .save-quantity-link{
   display:initial;
 }
+
+.empty-cart-div{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.shop-now{
+  padding:10px 15px;
+  border-radius:20px;
+  font-weight:400;
+  font-size:16px;
+  text-decoration:none;
+}

@@ -112,6 +112,12 @@ document.querySelectorAll(".js-delete-link").forEach((link) => {
 });
 
 export function calculateCartQuantity(newQuantity) {
+  let emptyCart = `
+        <div class="empty-cart-div">
+          <h2>Cart empty! (Shop Now)</h2>
+          <a href="amazon.html" class="button-primary shop-now">Shop Now</a>
+        </div>
+      `;
   let cartQuantity = 0;
 
   cart.forEach((cartItem) => {
@@ -126,6 +132,9 @@ export function calculateCartQuantity(newQuantity) {
   // cart quantity of order summary
   document.querySelector(".js-quantity-order-summary").innerHTML =
     `Items (${cartQuantity})`;
+    if (cartQuantity === 0){
+      document.querySelector('.js-main-checkout').innerHTML = emptyCart;
+    }
 }
 calculateCartQuantity();
 
