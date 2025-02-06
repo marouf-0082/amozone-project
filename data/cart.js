@@ -17,7 +17,8 @@ export function addToCart(productId, productQuantity){
   } else {
     cart.push({
       productId: productId,
-      quantity: productQuantity
+      quantity: productQuantity,
+      deliveryOptionId: '1'
     });
   }
   saveToStorage();
