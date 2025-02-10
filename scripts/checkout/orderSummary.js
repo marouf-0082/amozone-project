@@ -162,7 +162,8 @@ export function renderOrderSummary() {
         }
         updateQuantity(productId, newQuantity);
         renderOrderSummary();
-        
+        document.querySelector('.js-payment-summary-items').innerHTML = `Items (${calculateCartQuantity()}):`;
+
         const container = document.querySelector(`.js-cart-item-container-${productId}`);
         container.classList.remove('is-editing-quantity');
         
