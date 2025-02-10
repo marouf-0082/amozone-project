@@ -161,6 +161,7 @@ export function renderOrderSummary() {
           return;
         }
         updateQuantity(productId, newQuantity);
+        renderOrderSummary();
         
         const container = document.querySelector(`.js-cart-item-container-${productId}`);
         container.classList.remove('is-editing-quantity');
