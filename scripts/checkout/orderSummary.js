@@ -113,7 +113,6 @@ export function renderOrderSummary() {
         renderCheckoutHeader();
         renderPaymentSummary();
         renderOrderSummary();
-        updateCartQuantity();
       });
     });
     
